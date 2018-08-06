@@ -1,3 +1,9 @@
+'''
+usage:
+main(mode, out_path, tune=0, model_num=2, img_num=4)
+    -- out_path: file path without .jpg
+    -- tune: set num to config tune level.
+'''
 import os
 from PIL import Image
 import random
@@ -88,7 +94,7 @@ def test_new(mode, choose, img_num, out_path, modelNum, model_path):
             im.save(out_path+'{}.jpg'.format(random.randint(0, 1e5)))
 
 
-def main(mode, out_path, choose=16, tune=0, model_num=0, img_num=1):
+def main(mode, out_path, tune=0, model_num=0, img_num=1):
     root = '/run/media/why/DATA/why的程序测试/AI_Lab/AI-Avatar-Creater/demo_AnimeGAN'
     if mode == 1:
         model_path = root + '/model_dark/'
@@ -105,7 +111,7 @@ def main(mode, out_path, choose=16, tune=0, model_num=0, img_num=1):
     if tune:
         test_tune(mode, tune, img_num, out_path, modelNum, model_path)
     else:
-        test_new(mode, choose, img_num, out_path, modelNum, model_path)
+        test_new(mode, choose=64, img_num, out_path, modelNum, model_path)
 
 if __name__ =='__main__':
-    main(mode=0, out_path='./output/tmp', choose=64, tune=0, model_num=2, img_num=4)
+    main(mode=0, out_path='./output/tmp', tune=0, model_num=2, img_num=4)
