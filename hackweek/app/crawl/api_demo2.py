@@ -15,7 +15,8 @@ nz = 100
 # modelNum = [x*10+1 for x in range(10)]+[100]
 
 #workDir = os.getcwd()
-modelPath = '/run/media/why/DATA/why的程序测试/AI_Lab/AI-Avatar-Creater/demo_AnimeGAN/model_normal'
+# modelPath = '/run/media/why/DATA/why的程序测试/AI_Lab/AI-Avatar-Creater/demo_AnimeGAN/model_normal'
+modelPath = '/models/demo_AnimeGAN/model_normal'
 # savePath = workDir + '/output'
 # batchSize = opt.batch_size
 #################################################

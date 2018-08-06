@@ -3,9 +3,11 @@ from flask import render_template,request
 import os
 from . import imageTransfer
 basedir = os.path.abspath(os.path.dirname(__file__))
+
 @draw.route('/',methods=['GET'])
 def drawl_main():
     return render_template('draw.html')
+
 @draw.route('/',methods=["POST"])
 def proccess_Data():
     files = request.files
