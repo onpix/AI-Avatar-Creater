@@ -18,7 +18,7 @@ import torch
 #style_num = 1
 #
 #path options:
-dir_path = '/run/media/why/DATA/why的程序测试/AI_Lab/AI-Avatar-Creater/hackweek (2)/hackweek/app/draw/static'
+dir_path = '/run/media/why/DATA/why的程序测试/AI_Lab/AI-Avatar-Creater/hackweek/app/draw/static'
 origin_path = dir_path + '/train/'
 style_path = dir_path + '/pic/'
 out_path = dir_path + '/out/'
