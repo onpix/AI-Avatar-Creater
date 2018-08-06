@@ -2,7 +2,7 @@ import os
 if __package__:
     from . import model64
 else:
-    import models
+    import model64
 import torch
 import torchvision
 cuda = True
@@ -21,6 +21,8 @@ nz = 100
 # modelPath = '/run/media/why/DATA/why的程序测试/AI_Lab/AI-Avatar-Creater/demo_AnimeGAN/model_normal'
 basedir = os.path.dirname(__file__)
 modelPath = basedir + '/../models/demo_AnimeGAN/model_normal'
+if __name__ =='__main__':
+        modelPath = '/run/media/why/DATA/why的程序测试/AI_Lab/AI-Avatar-Creater/hackweek/app/models/demo_AnimeGAN/model_normal'
 # savePath = workDir + '/output'
 # batchSize = opt.batch_size
 #################################################
@@ -73,4 +75,4 @@ def main(out_path, mode, model_num=0, img_num=4, batch_size=1, tune=False):
     testNet.test()
 
 if __name__ == '__main__':
-    main(out_path='./test.jpg', mode=4, model_num=3, img_num=1, batch_size=16, tune=10)
+    main(out_path='./test.jpg', mode=4, model_num=3, img_num=1, batch_size=8, tune=30)

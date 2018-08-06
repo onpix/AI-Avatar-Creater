@@ -135,4 +135,4 @@ def main(mode, out_path, tune=0, model_num=0, img_num=1, batch_size=0):
         test_new(mode, img_num, out_path, modelNum, model_path, batch_size, choose=64)
 
 if __name__ =='__main__':
-    main(mode=2, out_path='./test.jpg', tune=0, model_num=1, img_num=4, batch_size=64)
+    main(mode=2, out_path='./test.jpg', tune=30, model_num=3, img_num=4, batch_size=8)
