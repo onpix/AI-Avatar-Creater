@@ -40,6 +40,9 @@ cnn = (models.vgg19(pretrained=True).features).eval().to(device)
 
 def loadImg(path):
     img = Image.open(path)
+    bg = Image.new("RGB", img.size, (255,255,255))
+    bg.paste(img, img)
+    img = bg
     imgSize = img.size if max(img.size)<max_size else max_size
     loader = transforms.Compose(
     [transforms.Resize(imgSize), transforms.CenterCrop(imgSize), transforms.ToTensor()])
