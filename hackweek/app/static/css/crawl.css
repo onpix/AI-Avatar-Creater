@@ -19,7 +19,7 @@ margin-bottom: 15px;
     justify-content: center
 }
 .on{
-    background-color: red
+    background-color:rgb(46,77, 232)
 }
 .vertical-center{
     align-items: center;
@@ -33,4 +33,8 @@ margin-bottom: 15px;
 }
 body{
     background-image: url(../pic/back-dark.png);
+}
+.text_center{
+    text-align: center;
+    text-align-last: center;
 }

@@ -10,7 +10,7 @@
     display: flex;
 }
 .on{
-    background-color: red
+    background-color:rgb(46,77, 232)
 }
 .space{
     margin-top: 30px;
@@ -25,5 +25,5 @@
     padding:0;
 }
 body{
-    background-image: url(../pic/back-dark.png);
+    background-image: url(../pic/back.png);
 }
