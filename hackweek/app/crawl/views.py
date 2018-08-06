@@ -7,7 +7,6 @@ USER_NUM = 0
 # OUT_PATH = '/run/media/why/DATA/why的程序测试/AI_Lab/AI-Avatar-Creater/hackweek/app/crawl/static/out'
 basedir = os.path.dirname(__file__)
 OUT_PATH = basedir + '/static/out'
-
 @crawl.route('/',methods=['GET'])
 def crawl_main():
     return render_template('crawl.html')
