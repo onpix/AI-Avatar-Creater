@@ -37,6 +37,12 @@ $(document).ready(function(){
         .removeClass('on')
         .addClass('btn-default');
     }).removeClass('btn-default').addClass('on');
+    $('#option-4').on('change',function(){
+        $("#styleimg").attr("src","/static/pic/vango.jpeg");
+        $('#btn-label-4').removeClass('btn-default').addClass('on').siblings()
+        .removeClass('on')
+        .addClass('btn-default');
+    }).removeClass('btn-default').addClass('on');
     $('#sub-Btn').on('click',function(){
         console.log($('input:radio[name="options"]:checked').val());
         var formData = new FormData();
