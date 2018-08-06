@@ -24,3 +24,9 @@
 body{
     background-image: url(../pic/back.png);
 }
+.vertical-center{
+    align-items: center;
+}
+#navbar{
+    box-shadow: 0px 3px 8px #ffffff;
+}
