@@ -18,26 +18,26 @@ $(function(){
     $('#option-3').attr("checked",'checked');
     $('#btn-label-3').removeClass('btn-default').addClass('on');
     $('#option-1').on('change',function(){
-        $("#styleimg").attr("src","/static/pic/model2.jpeg");
+        $("#styleimg").attr("src","/static/pic/mode2.jpeg");
         $('#btn-label-1').removeClass('btn-default').addClass('on').siblings()
         .removeClass('on')
         .addClass('btn-default');
     });
     $('#option-2').on('change',function(){
-        $("#styleimg").attr("src","/static/pic/model3.jpg");
+        $("#styleimg").attr("src","/static/pic/mode3.jpg");
         $('#btn-label-2').removeClass('btn-default').addClass('on').siblings()
         .removeClass('on')
         .addClass('btn-default');
 
     }).removeClass('btn-default').addClass('on');
     $('#option-3').on('change',function(){
-        $("#styleimg").attr("src","/static/pic/model4.jpeg");
+        $("#styleimg").attr("src","/static/pic/mode4.jpeg");
         $('#btn-label-3').removeClass('btn-default').addClass('on').siblings()
         .removeClass('on')
         .addClass('btn-default');
     }).removeClass('btn-default').addClass('on');
     $('#option-4').on('change',function(){
-        $("#styleimg").attr("src","/static/pic/model6.png");
+        $("#styleimg").attr("src","/static/pic/mode6.png");
         $('#btn-label-4').removeClass('btn-default').addClass('on').siblings()
         .removeClass('on')
         .addClass('btn-default');
