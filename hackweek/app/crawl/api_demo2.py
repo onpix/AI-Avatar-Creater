@@ -6,7 +6,7 @@ cuda = True
 device = torch.device(
     'cuda') if torch.cuda.is_available() and cuda else torch.device('cpu')
 nz = 100
-'''model=3 for soft , 4for normal'''
+'''model=3 for soft , 4 for normal'''
 #########################    
 # mode = 0   # '0 for normal style, 1 for soft style, -1 to debug')
 # tune = False
