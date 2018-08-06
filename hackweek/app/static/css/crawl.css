@@ -18,3 +18,10 @@ margin-bottom: 15px;
 .on{
     background-color: red
 }
+.vertical-center{
+    align-items: center;
+}
+.imgbox{
+    width:400px;
+    height:400px;
+}

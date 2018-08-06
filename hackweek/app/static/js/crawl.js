@@ -44,6 +44,7 @@ $(function(){
         form['select-4'] = $('select[name="select-4"] option:selected').val();
         form['select-5'] = $('input:radio[name="options-2"]:checked').val();
         form['select-6'] = $('input:radio[name="options-3"]:checked').val();
+        form['model'] = $('input:radio[name="options"]:checked').val()
         console.log(form);
         $.ajax({
             url:"/crawl/",
