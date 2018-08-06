@@ -21,4 +21,4 @@ def proccess_Data():
     #print('[test] path:\n {}\n{}\n{}'.format(in_name, imgToTrain.filename, in_name))
     imageTransfer.main(style_name=in_name, origin_name=imgToTrain.filename, out_name=in_name, num_steps=int(form.get('times')), style_weight=int(form.get('level')))
     print(file_path)
-    return "/static/train/out"+imgToTrain.filename
+    return "/static/train/out/"+imgToTrain.filename
