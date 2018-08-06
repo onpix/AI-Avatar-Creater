@@ -3,6 +3,7 @@ usage:
 main(mode, out_path, tune=0, model_num=2, img_num=4)
     -- out_path: file path without .jpg
     -- tune: set num to config tune level.
+    -model 2 for dark, 6 for LL
 '''
 import os
 from PIL import Image
@@ -77,7 +78,7 @@ def test_tune(mode, tune, img_num, out_path, modelNum, model_path):
         fake_batch, _ = netG(noise_batch)
         for x in fake_batch:
             im = convert_img(x.data, 8)
-            im.save(out_path+'{}.jpg'.format(random.randint(0, 1e5)))
+            im.save(out_path)
 
 
 def test_new(mode, img_num, out_path, modelNum, model_path, choose):
@@ -91,16 +92,16 @@ def test_new(mode, img_num, out_path, modelNum, model_path, choose):
             score = netD(fake_batch)
             ix = int(torch.argmax(score))
             im = convert_img(fake_batch[ix].data, 8)
-            im.save(out_path+'{}.jpg'.format(random.randint(0, 1e5)))
+            im.save(out_path)
 
 
 def main(mode, out_path, tune=0, model_num=0, img_num=1):
     root = '/run/media/why/DATA/why的程序测试/AI_Lab/AI-Avatar-Creater/demo_AnimeGAN'
-    if mode == 1:
+    if mode == 2:
         model_path = root + '/model_dark/'
         modelNum = ['024_M01', '007_M01']
         modelNum = [modelNum[model_num], ]
-    elif mode == 0:
+    elif mode == 6:
         model_path = root + '/model_LL/'
         modelNum = ['40', '60', '80', '160', '80_E3', '80_B16']
         modelNum = [modelNum[model_num], ]

@@ -6,7 +6,7 @@ cuda = True
 device = torch.device(
     'cuda') if torch.cuda.is_available() and cuda else torch.device('cpu')
 nz = 100
-
+'''model=3 for soft , 4for normal'''
 #########################    
 # mode = 0   # '0 for normal style, 1 for soft style, -1 to debug')
 # tune = False
@@ -53,7 +53,7 @@ class TestNet(object):
                 else:
                     z = torch.randn(self.batch_size, nz, 1, 1).to(device)
                 torchvision.utils.save_image(self.G(z).detach(
-                ), self.out_path+'/soft_M{}_{}.jpg'.format(n, i), normalize=True)
+                ), self.out_path, normalize=True)
         print('\033[1;36;40m  generate over! \033[0m')
 
 ############## load model: ###############
