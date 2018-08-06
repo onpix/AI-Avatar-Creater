@@ -1,0 +1,14 @@
+*{
+    margin: 0 auto;
+    padding: 0;
+}
+.center{
+    display: flex;
+    justify-content: center
+}
+.flex{
+    display: flex;
+}
+.on{
+    background-color: red
+}

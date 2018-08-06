@@ -1,0 +1,20 @@
+*{
+    padding: 0;
+    margin: 0,auto;
+}
+.flex{
+    display: flex;
+}
+.row{
+margin-bottom: 15px;
+}
+.no-padding{
+    padding: 0;
+}
+.center{
+    display: flex;
+    justify-content: center
+}
+.on{
+    background-color: red
+}

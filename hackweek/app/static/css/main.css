@@ -1,0 +1,56 @@
+#main{
+    width: 100%;
+    height: 100%;
+}
+body{
+    width:100%;
+    height: 100%;
+}
+a:hover{
+    text-decoration: none;
+}
+*{
+    margin: 0;
+    padding: 0;
+    height: 100%;
+}
+#pic1{
+    height: 200px;
+    width: 200px;
+    margin: 0 auto;
+}
+#pic2{
+    height: 200px;
+    width: 200px;
+    margin: 0 auto;
+}
+.flex{
+    display: flex;
+}
+.vertical-center{
+    align-items: center;
+}
+#bar2{
+    text-align: center;
+}
+.imgbox{
+    width:200px;
+    height: 200px;
+    position: relative;
+}
+.head{
+    position: absolute;
+    top: -100px;
+    line-height: 20px;
+    height: 20px;
+    width: 100%;
+}
+@media (max-width: 500px){
+    #bar2{
+        display: none;
+    }
+    #bar1,#bar3{
+        height: 50%;
+    }
+
+}

@@ -13,22 +13,29 @@ import torch
 
 
 parse = argparse.ArgumentParser()
-parse.add_argument('--style_num', type=int, default=1, help='number of image style you want to transfer to.')
-parse.add_argument('--cuda', action='store_true', help='use cuda in trainning.')
-parse.add_argument('--max_size', type=int, default=256, help='max size of input image.')
+#user options:
 parse.add_argument('--num_steps', type=int, default=300, help='num of training epoch.')
 parse.add_argument('--style_weight', type=int, default=1e5, help='weight of style compared to contents.')
+#parse.add_argument('--style_num', type=int, default=4, help='number of image style you want to transfer to.')
+
+#path options:
+# parse.add_argument('--style_path', type=str, default='', required=True, help='path of style image.')
+# parse.add_argument('--origin_path', type=str, default='', required=True, help='path of origin image.')
+
+#edfault options:
+parse.add_argument('--cuda', action='store_true', help='use cuda in trainning.')
+parse.add_argument('--max_size', type=int, default=256, help='max size of input image.')
 opt = parse.parse_args()
 
 contentLayers = ['conv_4']
 styleLayers = ['conv_1', 'conv_2', 'conv_3', 'conv_4', 'conv_5']
-rootPath = '/run/media/why/DATA/why的程序测试/AI_Lab/Task/AnimeProject/demo3_StyleTransfer'
 contentWeight = 1
-TARGET_PATH = rootPath + '/target{}.jpg'.foramt(opt.style_num)
-ORIGIN_PATH = rootPath + '/origin.jpg'
 unloader = transforms.ToPILImage()
 device = torch.device('cuda') if opt.cuda else torch.device('cpu')
 cnn = (models.vgg19(pretrained=True).features).eval().to(device)
+rootPath = '/run/media/why/DATA/why的程序测试/AI_Lab/AI-Avatar-Creater/demo3_StyleTransfer'
+TARGET_PATH = rootPath + '/target2.jpg'
+ORIGIN_PATH = rootPath + '/origin.jpg'
 
 
 def loadImg(path):
@@ -45,7 +52,7 @@ def show(tensor):
     image = image.squeeze(0)      # remove the fake batch dimension
     image = unloader(image)
     plt.imshow(image)
-    plt.pause(0.1)  # pause a bit so that plots are updated
+    #plt.pause(0.1)  # pause a bit so that plots are updated
 
 
 def calGram(featmap):
@@ -151,14 +158,16 @@ def transfer(cnn, origin, target, inputImg):
     prama.data.clamp_(0, 1)
     return prama.data
 
+def main():
+    plt.ion()
+    target = loadImg(TARGET_PATH)
+    origin = loadImg(ORIGIN_PATH)
+    img = origin.clone()
+    out = transfer(cnn, origin, target, img)
+    plt.figure()
+    show(out)
+    plt.savefig(str(np.random.randint(1e5))+'.jpg')
+    #plt.ioff()
+    #plt.show()
 
-plt.ion()
-target = loadImg(TARGET_PATH)
-origin = loadImg(ORIGIN_PATH)
-img = origin.clone()
-out = transfer(cnn, origin, target, img)
-plt.figure()
-show(out)
-plt.savefig(str(np.random.randint(1e5))+'.jpg')
-#plt.ioff()
-#plt.show()
+main()

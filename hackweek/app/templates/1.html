@@ -1,0 +1,53 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <meta http-equiv="X-UA-Compatible" content="ie=edge">
+    <link href="bootstrap-3.3.7-dist/css/bootstrap.min.css" rel="stylesheet">
+    <link href="201505091706/css/fileinput.min.css" rel="stylesheet">
+    <link href="css/draw.css" rel="stylesheet">
+    <title>Drawl</title>
+</head>
+<body>
+    <div class="navbar bg-info">
+        <div class="nav col-sm-8 badge-success"></div>
+    </div>
+    <div class="container-fluid ">
+        <div class="center">
+             <div class="col-sm-8 container">
+                 <div class="center">
+                            <div class="btn-group flex center-block no-padding " data-toggle="buttons" id="button-group1">
+                                    <label class="btn btn-default" id="btn-label-1">
+                                        素描 <input type="radio" name="options" id="option-1" value="sumiao">                               
+                                         </label>
+                                         <label class="btn btn-default" id="btn-label-2" >
+                                        动漫<input type="radio" name="options" id="option-2" value="comic">                               
+                                        </label>
+                                        <label class="btn btn-default" id="btn-label-3">
+                                        梵高<input type="radio" name="options" id="option-3" value="vango" >                               
+                                </label>  
+                            </div>   
+                 </div>
+                    <div class="center">
+                                    <div class="col-sm-10" style="margin-bottom: 20px;">
+                                        <img src="vango.jpeg" alt="" class="img-responsive" id="styleimg">
+                                    </div> 
+                        </div>
+                        <div class="pic">
+                            <div class="center">
+                                <div class="col-sm-6">
+                                        <input type="file" id="file" name="file">
+                                </div>
+                            </div>
+                        </div>
+                </div> 
+        </div>                     
+    </div>
+    
+    <script src="https://cdn.bootcss.com/jquery/3.3.1/jquery.min.js"></script>
+    <script src="bootstrap-3.3.7-dist/js/bootstrap.min.js"  ></script>
+    <script src="201505091706/js/fileinput.min.js"></script>
+    <script src="js/draw.js"></script>
+</body>
+</html>

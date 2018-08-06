@@ -12,7 +12,7 @@ parse.add_argument('--mode', type=int, default=1, help='0 for LL style, 1 for da
 parse.add_argument('--cuda', action='store_true', help='use cuda in trainning.')
 parse.add_argument('--tune', action='store_true', help='to freeze some dimensions of tensor z to tune the image.')
 parse.add_argument('--choose', type=int, default=16, help='set 0 to close choose mode, set n to choose the best image from n generated samples')
-parse.add_argument('--model_num', type=str, required=True, help='num of model to use.')
+parse.add_argument('--model_num', type=int, required=True, help='num of model to use.')
 opt = parse.parse_args()
 
 DIR = '/run/media/why/DATA/why的程序测试/AI_Lab/Task/AnimeProject/demo_AnimeGAN'
@@ -22,11 +22,11 @@ save_path = DIR + '/output'
 if opt.mode == 1:
     model_path = DIR + '/model_dark/'
     modelNum = ['024_M01', '007_M01']
-    modelNum = [opt.model_num, ]
+    modelNum = [modelNum(opt.model_num), ]
 elif opt.mode == 0:
     model_path = DIR + '/model_LL/'
     modelNum = ['40', '60', '80', '160', '80_E3', '80_B16']
-    modelNum = [opt.model_num, ]
+    modelNum = [modelNum(opt.model_num), ]
 elif opt.mode == -1:
     model_path = DIR + '/Data/'
     modelNum = [20, 40, 60, 80]
