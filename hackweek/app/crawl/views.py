@@ -1,8 +1,7 @@
-from api_demo1 import main as main1
+from . import api_demo1
 from . import crawl
 from flask import render_template,request    
-
-
+USER_NUM = 0
 
 @crawl.route('/',methods=['GET'])
 def crawl_main():
@@ -11,8 +10,18 @@ def crawl_main():
 def data_load():
     data = request.form
     print(request.form)
-    in_name = data.get()
-    main1(mode=data.get('model'), out_path='./static/out/', tune= )
+    request.form
+    # args:
+    tune  =10*int(data.get('level'))
+    model_num = int(data.get('models'))-1
+    img_num = int(data.get('number'))
+    mode = int(data.get('situation'))
+    out_path='./static/out/{}.jpg'.format(USER_NUM)
+    if mode == 6 or mode == 2:
+        api_demo1.main(mode=mode, out_path=out_path, tune=tune, model_num=model_num, img_num=img_num)
+    USER_NUM += 1
+#################################################
+
     return data;
 
 

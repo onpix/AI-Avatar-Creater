@@ -10,7 +10,7 @@ import random
 import torch
 import torchvision.utils as vutils
 import torchvision.transforms
-import models
+from . import models
 import re
 CUDA = True
 # mode =1, # '0 for LL style, 1 for dark style, -1 for test.'
@@ -80,7 +80,7 @@ def test_tune(mode, tune, img_num, out_path, modelNum, model_path):
             im.save(out_path+'{}.jpg'.format(random.randint(0, 1e5)))
 
 
-def test_new(mode, choose, img_num, out_path, modelNum, model_path):
+def test_new(mode, img_num, out_path, modelNum, model_path, choose):
     for i in modelNum:
         netG = loadG(i, model_path)
         netD = loadD(i, model_path)
@@ -111,7 +111,7 @@ def main(mode, out_path, tune=0, model_num=0, img_num=1):
     if tune:
         test_tune(mode, tune, img_num, out_path, modelNum, model_path)
     else:
-        test_new(mode, choose=64, img_num, out_path, modelNum, model_path)
+        test_new(mode, img_num, out_path, modelNum, model_path, choose=64)
 
 if __name__ =='__main__':
     main(mode=0, out_path='./output/tmp', tune=0, model_num=2, img_num=4)
