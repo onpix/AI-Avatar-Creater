@@ -21,7 +21,12 @@
     </div>
     <div class="container-fluid ">
         <div class="center" id="draw-main">
-             <div class="col-sm-8 container">
+             <div class="col-sm-12 container">
+                <div class="center">
+                            <div class="col-sm-10" style="margin-bottom: 20px;">
+                                <img src="/static/pic/vango.jpeg" alt="" class="img-responsive" id="styleimg">
+                            </div> 
+                </div>
                  <div class="center">
                             <div class="btn-group flex center-block no-padding " data-toggle="buttons" id="button-group1">
                                     <label class="btn btn-default" id="btn-label-1">
@@ -35,21 +40,16 @@
                                 </label>  
                             </div>   
                  </div>
-                    <div class="center">
-                                    <div class="col-sm-10" style="margin-bottom: 20px;">
-                                        <img src="/static/pic/vango.jpeg" alt="" class="img-responsive" id="styleimg">
-                                    </div> 
-                        </div>
-                        <div class="pic">
-                            <div class="center">
+                    <div class="pic">
+                            <div class="center margin-bottom">
                                 <div class="col-sm-6">
-                                             <input type="file" id="file" name="file">
+                                        <input type="file" id="file" name="file">
                                 </div>
                             </div>
-                        </div>
+                    </div>
                    <div class="center">
-                        <div class="col-sm-6">
-                                <div class="center col-sm-6">
+                        <div class="col-sm-8">
+                                <div class="center col-sm-6 margin-bottom">
                                         <div class="text-center" >
                                             <label for="feature-1">风格等级</label><small class="text-muted">看你的口味</small>
                                             <select name="select-1" id="feature-1" class="input-lg form-control" >
@@ -62,8 +62,8 @@
                                             <option value="7">7</option>
                                         </select>
                                     </div>
-                                    </div>
-                                    <div class="center col-sm-6">
+                                </div>
+                                    <div class="center col-sm-6 margin-bottom">
                                             <div class="text-center">
                                                 <label for="feature-2">train time</label><small class="text-muted">看你的口味</small>
                                                 <select name="select-2" id="feature-2" class="input-lg form-control" >
@@ -80,7 +80,7 @@
                         </div>
                    </div>
                         <div class="center">
-                            <div class="btn col-sm-6 ">
+                            <div class="btn col-sm-8">
                                 <button class="btn-primary btn btn-lg" id="sub-Btn" >Draw</button>
                             </div>
                         </div>
