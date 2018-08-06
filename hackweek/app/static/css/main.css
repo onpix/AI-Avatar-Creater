@@ -56,7 +56,7 @@ a:hover{
 }
 @media (min-width:500px){
     #main{
-        background-image: url(../../static/pic/bg-index.png);
+        background-image: url(../pic/bg-index.png);
         background-repeat: no-repeat;
         background-size: cover;
     }
