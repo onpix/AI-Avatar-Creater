@@ -16,6 +16,7 @@ def data_load():
     model_num = int(data.get('models'))-1
     img_num = int(data.get('number'))
     mode = int(data.get('situation'))
+    global USER_NUM
     out_path='./static/out/{}.jpg'.format(USER_NUM)
     if mode == 6 or mode == 2:
         api_demo1.main(mode=mode, out_path=out_path, tune=tune, model_num=model_num, img_num=img_num)
