@@ -55,6 +55,9 @@ $(function(){
     var crawl_download = $('#crawl-download');
     var crawl_main = $('#crawl-main');
     crawl_download.css('display','none');
+    $('#nav-btn').click(function(){
+        $('#collect').toggle();
+    });
     $('#sub-Btn').on("click",function (){
         var form={};
         form['situation'] = $('input:radio[name="options"]:checked').val()

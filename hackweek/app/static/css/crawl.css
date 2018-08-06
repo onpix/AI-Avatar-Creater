@@ -35,3 +35,8 @@ body{
     text-align: center;
     text-align-last: center;
 }
+#collect{
+    position: absolute;
+    bottom: 0;
+    left: 0;
+}
