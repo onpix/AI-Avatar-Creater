@@ -14,17 +14,17 @@
             <div class="nav"></div>
         </div>
     </div>
-    <div class="container">
+    <div class="container" id="crawl_main">
         <div class="row">
                 <div class="row center">
-                        <div class="col-sm-10">
-                            <div class="center">
-                                        <div class="col-sm-10 margin-bottom">
+                        <div class="col-sm-10 ">
+                            <div class="center ">
+                                        <div class="col-sm-10 center margin-bottom">
                                             <img src="/static/pic/vango.jpeg" alt="" class="img-responsive" id="styleimg">
                                         </div> 
                             </div>
                                 <div class="center">
-                                        <div class="btn-group flex center-block no-padding " data-toggle="buttons" id="button-group1">
+                                        <div class="btn-group flex center-block no-padding" data-toggle="buttons" id="button-group1">
                                                 <label class="btn btn-default" id="btn-label-1">
                                                     素描 <input type="radio" name="options" id="option-1" value=6>                               
                                                      </label>
@@ -43,7 +43,7 @@
                     </div>
         </div>
         <div class="row">
-                <div class="col-sm-4 bg-white">
+                <d iv class="col-sm-4 bg-white">
                         <div class="center vertical-center">
                             <div class="flex imgbox" id="main-img">
                                 <img src="/static/pic/sky.jpg" alt="如果没有加载好的话，说明我们的服务器真的很烂" class="img-responsive" >
@@ -54,8 +54,8 @@
                                     <button class="btn btn-lg " id="sub-Btn">生成</button>
                                 </div>
                             </div>
-                    </div>
-                    <div class="col-sm-8 bg-light">     
+        </div>
+        <div class="col-sm-8 bg-light">     
                         <div class="row">
                             <h5 class="text-center"><em>Options</em></h5>
                             <div class="center">
@@ -151,9 +151,30 @@
                                             
                                  </div>
                         </div> -->
+         </div>
+        </div>
+    <div class="container" id="crawl-download">
+            <div class="col-sm-10">
+                <div class="center">
+                        <div class="col-sm-10 center">
+                            <div id="img-box"> </div>
+                        </div>
+                    </div> 
+                    <div class="center"> 
+                            <div class="center col-sm-8">
+                                    <div class="row col-sm-8">
+                                        <div class="col-sm-6 center">
+                                                <a href="/crawl/">
+                                                    <button id="back-btn" class="btn-primary btn ">我还要画</button>
+                                                </a> 
+                                            </div>
+                                        <div class="col-sm-6 center" id="download">
+                                        </div>
+                                </div>
+                         </div>
                     </div>
         </div>
-            </div>
+    </div>
     <script src="/static/js/jquery.js"></script>
     <script src="/static/bootstrap-3.3.7-dist/js/bootstrap.min.js"  ></script>
     <script src="/static/js/crawl.js"></script>

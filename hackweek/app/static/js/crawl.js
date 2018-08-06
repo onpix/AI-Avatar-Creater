@@ -49,7 +49,12 @@ $(function(){
         for(i=1;i<=( $('input:radio[name="options"]:checked').val());i++){
             models.append('<option value="'+i+'">'+i+'</option>');
         }
-    })
+    });
+    var img_box_2 = $('#img-box');
+    var download = $('#download');
+    var crawl_download = $('#crawl-download');
+    var crawl_main = $('#crawl-main');
+    crawl_download.css('display','none');
     $('#sub-Btn').on("click",function (){
         var form={};
         form['situation'] = $('input:radio[name="options"]:checked').val()
@@ -57,14 +62,16 @@ $(function(){
         form['level'] = $('select[name="select-2"] option:selected').val();
         form['number'] = $('select[name="select-3"] option:selected').val();
         console.log(form);
-        var img_box = $('#main-img');
         $.ajax({
             url:"/crawl/",
             type:"POST",
             data: form,
             datatype:'json',
             success:function(data){
-                img_box.html('<img src="'+data+'" class="img-responsive">');
+                crawl_download.css('display','block');
+                crawl_main.css('display','none');
+                img_box_2.html('<img src="'+data+'" class="img-responsive">');
+                download.html('<a href="'+data+'" download="out"><button class="btn btn-primary">下载图片</button></a>');
             },
             error:function(){
                 $('mainimg').attr('src','/static/pic/comic.jpg');
