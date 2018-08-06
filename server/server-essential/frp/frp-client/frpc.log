@@ -1,0 +1,60 @@
+2018/08/06 16:52:30 [I] [proxy_manager.go:300] proxy removed: []
+2018/08/06 16:52:30 [I] [proxy_manager.go:310] proxy added: [avatar.www]
+2018/08/06 16:52:30 [I] [proxy_manager.go:333] visitor removed: []
+2018/08/06 16:52:30 [I] [proxy_manager.go:342] visitor added: []
+2018/08/06 16:52:32 [I] [control.go:246] [bf15e481429c3dc1] login to server success, get run id [bf15e481429c3dc1], server udp port [0]
+2018/08/06 16:52:32 [I] [service.go:50] admin server listen on 127.0.0.1:7400
+2018/08/06 16:52:32 [W] [control.go:167] [bf15e481429c3dc1] [avatar.www] start error: proxy [avatar.www] domain conf check error: custom domain [www.avatarmaker.dns-cloud.net] should not belong to subdomain_host [avatarmaker.dns-cloud.net]
+2018/08/06 16:53:32 [W] [control.go:167] [bf15e481429c3dc1] [avatar.www] start error: proxy [avatar.www] domain conf check error: custom domain [www.avatarmaker.dns-cloud.net] should not belong to subdomain_host [avatarmaker.dns-cloud.net]
+2018/08/06 16:54:32 [W] [control.go:167] [bf15e481429c3dc1] [avatar.www] start error: proxy [avatar.www] domain conf check error: custom domain [www.avatarmaker.dns-cloud.net] should not belong to subdomain_host [avatarmaker.dns-cloud.net]
+2018/08/06 16:55:19 [E] [control.go:152] [bf15e481429c3dc1] work connection closed, EOF
+2018/08/06 16:55:19 [E] [control.go:152] [bf15e481429c3dc1] work connection closed, EOF
+2018/08/06 16:55:19 [E] [control.go:152] [bf15e481429c3dc1] work connection closed, EOF
+2018/08/06 16:55:19 [I] [control.go:308] [bf15e481429c3dc1] control writer is closing
+2018/08/06 16:55:19 [I] [control.go:407] [bf15e481429c3dc1] try to reconnect to server...
+2018/08/06 16:55:19 [E] [control.go:152] [bf15e481429c3dc1] work connection closed, EOF
+2018/08/06 16:55:19 [E] [control.go:152] [bf15e481429c3dc1] work connection closed, EOF
+2018/08/06 16:55:19 [W] [control.go:410] [bf15e481429c3dc1] reconnect to server error: dial tcp 140.82.29.10:23333: connect: connection refused
+2018/08/06 16:55:20 [I] [control.go:407] [bf15e481429c3dc1] try to reconnect to server...
+2018/08/06 16:55:21 [W] [control.go:410] [bf15e481429c3dc1] reconnect to server error: dial tcp 140.82.29.10:23333: connect: connection refused
+2018/08/06 16:55:23 [I] [control.go:407] [bf15e481429c3dc1] try to reconnect to server...
+2018/08/06 16:55:23 [W] [control.go:410] [bf15e481429c3dc1] reconnect to server error: dial tcp 140.82.29.10:23333: connect: connection refused
+2018/08/06 16:55:27 [I] [control.go:407] [bf15e481429c3dc1] try to reconnect to server...
+2018/08/06 16:55:28 [W] [control.go:410] [bf15e481429c3dc1] reconnect to server error: dial tcp 140.82.29.10:23333: connect: connection refused
+2018/08/06 16:55:36 [I] [control.go:407] [bf15e481429c3dc1] try to reconnect to server...
+2018/08/06 16:55:36 [I] [control.go:246] [bf15e481429c3dc1] login to server success, get run id [bf15e481429c3dc1], server udp port [0]
+2018/08/06 16:55:37 [W] [control.go:167] [bf15e481429c3dc1] [avatar.www] start error: proxy [avatar.www] domain conf check error: custom domain [www.avatarmaker.dns-cloud.net] should not belong to subdomain_host [avatarmaker.dns-cloud.net]
+2018/08/06 16:56:20 [E] [control.go:152] [bf15e481429c3dc1] work connection closed, EOF
+2018/08/06 16:56:20 [E] [control.go:152] [bf15e481429c3dc1] work connection closed, EOF
+2018/08/06 16:56:20 [I] [control.go:308] [bf15e481429c3dc1] control writer is closing
+2018/08/06 16:56:20 [E] [control.go:152] [bf15e481429c3dc1] work connection closed, EOF
+2018/08/06 16:56:20 [E] [control.go:152] [bf15e481429c3dc1] work connection closed, EOF
+2018/08/06 16:56:20 [E] [control.go:152] [bf15e481429c3dc1] work connection closed, EOF
+2018/08/06 16:56:20 [I] [control.go:407] [bf15e481429c3dc1] try to reconnect to server...
+2018/08/06 16:56:21 [W] [control.go:410] [bf15e481429c3dc1] reconnect to server error: dial tcp 140.82.29.10:23333: connect: connection refused
+2018/08/06 16:56:22 [I] [control.go:407] [bf15e481429c3dc1] try to reconnect to server...
+2018/08/06 16:56:22 [W] [control.go:410] [bf15e481429c3dc1] reconnect to server error: dial tcp 140.82.29.10:23333: connect: connection refused
+2018/08/06 16:56:24 [I] [control.go:407] [bf15e481429c3dc1] try to reconnect to server...
+2018/08/06 16:56:24 [W] [control.go:410] [bf15e481429c3dc1] reconnect to server error: dial tcp 140.82.29.10:23333: connect: connection refused
+2018/08/06 16:56:28 [I] [control.go:407] [bf15e481429c3dc1] try to reconnect to server...
+2018/08/06 16:56:29 [W] [control.go:410] [bf15e481429c3dc1] reconnect to server error: dial tcp 140.82.29.10:23333: connect: connection refused
+2018/08/06 16:56:37 [I] [control.go:407] [bf15e481429c3dc1] try to reconnect to server...
+2018/08/06 16:56:38 [I] [control.go:246] [bf15e481429c3dc1] login to server success, get run id [bf15e481429c3dc1], server udp port [0]
+2018/08/06 16:56:38 [W] [control.go:167] [bf15e481429c3dc1] [avatar.www] start error: proxy [avatar.www] domain conf check error: custom domain [www.avatarmaker.dns-cloud.net] should not belong to subdomain_host [avatarmaker.dns-cloud.net]
+2018/08/06 16:57:38 [W] [control.go:167] [bf15e481429c3dc1] [avatar.www] start error: proxy [avatar.www] domain conf check error: custom domain [www.avatarmaker.dns-cloud.net] should not belong to subdomain_host [avatarmaker.dns-cloud.net]
+2018/08/06 16:58:51 [I] [proxy_manager.go:300] proxy removed: []
+2018/08/06 16:58:51 [I] [proxy_manager.go:310] proxy added: [avatar.www]
+2018/08/06 16:58:51 [I] [proxy_manager.go:333] visitor removed: []
+2018/08/06 16:58:51 [I] [proxy_manager.go:342] visitor added: []
+2018/08/06 16:58:52 [I] [control.go:246] [d391bcc50e6058f0] login to server success, get run id [d391bcc50e6058f0], server udp port [0]
+2018/08/06 16:58:52 [I] [service.go:50] admin server listen on 127.0.0.1:7400
+2018/08/06 16:58:52 [W] [control.go:167] [d391bcc50e6058f0] [avatar.www] start error: proxy [avatar.www] domain conf check error: custom domain [www.avatarmaker.dns-cloud.net] should not belong to subdomain_host [avatarmaker.dns-cloud.net]
+2018/08/06 16:59:52 [W] [control.go:167] [d391bcc50e6058f0] [avatar.www] start error: proxy [avatar.www] domain conf check error: custom domain [www.avatarmaker.dns-cloud.net] should not belong to subdomain_host [avatarmaker.dns-cloud.net]
+2018/08/06 17:00:52 [W] [control.go:167] [d391bcc50e6058f0] [avatar.www] start error: proxy [avatar.www] domain conf check error: custom domain [www.avatarmaker.dns-cloud.net] should not belong to subdomain_host [avatarmaker.dns-cloud.net]
+2018/08/06 17:01:22 [I] [proxy_manager.go:300] proxy removed: []
+2018/08/06 17:01:22 [I] [proxy_manager.go:310] proxy added: [avatar.www]
+2018/08/06 17:01:22 [I] [proxy_manager.go:333] visitor removed: []
+2018/08/06 17:01:22 [I] [proxy_manager.go:342] visitor added: []
+2018/08/06 17:01:23 [I] [control.go:246] [092223c9ef2943eb] login to server success, get run id [092223c9ef2943eb], server udp port [0]
+2018/08/06 17:01:23 [I] [service.go:50] admin server listen on 127.0.0.1:7400
+2018/08/06 17:01:23 [W] [control.go:167] [092223c9ef2943eb] [avatar.www] start error: proxy [avatar.www] domain conf check error: custom domain [www.avatarmaker.dns-cloud.net] should not belong to subdomain_host [avatarmaker.dns-cloud.net]
