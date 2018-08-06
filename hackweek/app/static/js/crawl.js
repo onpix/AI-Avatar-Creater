@@ -37,7 +37,7 @@ $(function(){
         .addClass('btn-default');
     }).removeClass('btn-default').addClass('on');
     $('#option-4').on('change',function(){
-        $("#styleimg").attr("src","/static/pic/vango.jpeg");
+        $("#styleimg").attr("src","/static/pic/situation-6.png");
         $('#btn-label-4').removeClass('btn-default').addClass('on').siblings()
         .removeClass('on')
         .addClass('btn-default');
