@@ -11,6 +11,11 @@ $(document).ready(function(){
     showPreview:true,
     showUpload:true
     });
+    var img_box = $('#img-box');
+    var download = $('#download');
+    var draw_download = $('#draw-download');
+    var draw_main = $('#draw-main');
+    draw_download.css('display','none');
     $('#option-3').attr("checked",'checked');
     $('#btn-label-3').removeClass('btn-default').addClass('on');
     $('#option-1').on('change',function(){
@@ -49,7 +54,10 @@ $(document).ready(function(){
             processData:false,  
             contentType:false,
             success:function(data){
-               $('img-box').html('<img src="'+data+'" class="img-responsive">');
+                draw_download.css('display','flex');
+                draw_main.css('display','none');
+                img_box.html('<img src="'+data+'" class="img-responsive">');
+                download.html('<a href="'+data+'" download="out"><button class="btn btn-primary">下载图片</button></a>');
             }
         })
     });
