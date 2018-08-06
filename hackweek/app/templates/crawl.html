@@ -13,34 +13,39 @@
 <body>
     <div class="navbar bg-info no-margin">
         <div class="nav col-sm-10 badge-success">
-            <div class="nav"></div>
+            <div class="navbar-header">
+                <a href="#" class="navbar-brand" id="nav"></a>
+            </div>
+            <div id="donante" class="navbar-right">
+                捐赠
+            </div>
         </div>
     </div>
     <div class="container" id="crawl-download">
-            <div class="col-sm-10">
-                <div class="center margin-bottom">
-                    <div class="col-sm-10 center">
-                        <div id="img-box"> </div>
-                    </div>
+        <div class="col-sm-10">
+            <div class="center margin-bottom">
+                <div class="col-sm-10 center">
+                    <div id="img-box"> </div>
                 </div>
-                <div class="center">
-                    <div class="center col-sm-8">
-                        <div class="row col-sm-8">
-                            <div class="col-sm-6 center">
-                                <a href="/crawl/">
-                                    <button id="back-btn" class="btn-primary btn ">我还要画</button>
-                                </a>
-                            </div>
-                            <div class="col-sm-6 center" id="download">
-                            </div>
+            </div>
+            <div class="center">
+                <div class="center col-sm-8">
+                    <div class="row col-sm-8">
+                        <div class="col-sm-6 center">
+                            <a href="/crawl/">
+                                <button id="back-btn" class="btn-primary btn ">我还要画</button>
+                            </a>
+                        </div>
+                        <div class="col-sm-6 center" id="download">
                         </div>
                     </div>
                 </div>
             </div>
         </div>
+    </div>
     <div id="crawl-main">
-        <div class="container-fluid no-padding" >
-                    <img src="/static/pic/mode4.png" alt=" " class="img-responsive" id="styleimg" style="width:100%">
+        <div class="container-fluid no-padding">
+            <img src="/static/pic/mode4.png" alt=" " class="img-responsive" id="styleimg" style="width:100%">
         </div>
         <div class="container">
             <div class="row">
@@ -189,9 +194,9 @@
             </div>
         </div>
     </div>
-        <script src="/static/js/jquery.js"></script>
-        <script src="/static/bootstrap-3.3.7-dist/js/bootstrap.min.js"></script>
-        <script src="/static/js/crawl.js"></script>
+    <script src="/static/js/jquery.js"></script>
+    <script src="/static/bootstrap-3.3.7-dist/js/bootstrap.min.js"></script>
+    <script src="/static/js/crawl.js"></script>
 </body>
 
 </html>

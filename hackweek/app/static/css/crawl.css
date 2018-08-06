@@ -31,3 +31,6 @@ margin-bottom: 15px;
 .margin-bottom{
     margin-bottom: 20px;
 }
+body{
+    background-image: url(../pic/back-dark.png);
+}
