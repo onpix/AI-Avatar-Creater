@@ -96,11 +96,11 @@ def test_new(mode, choose, img_num, out_path, modelNum, model_path):
 
 def main(mode, out_path, tune=0, model_num=0, img_num=1):
     root = '/run/media/why/DATA/why的程序测试/AI_Lab/AI-Avatar-Creater/demo_AnimeGAN'
-    if mode == 1:
+    if mode == 2:
         model_path = root + '/model_dark/'
         modelNum = ['024_M01', '007_M01']
         modelNum = [modelNum[model_num], ]
-    elif mode == 0:
+    elif mode == 6:
         model_path = root + '/model_LL/'
         modelNum = ['40', '60', '80', '160', '80_E3', '80_B16']
         modelNum = [modelNum[model_num], ]
@@ -114,4 +114,4 @@ def main(mode, out_path, tune=0, model_num=0, img_num=1):
         test_new(mode, choose=64, img_num, out_path, modelNum, model_path)
 
 if __name__ =='__main__':
-    main(mode=0, out_path='./output/tmp', tune=0, model_num=2, img_num=4)
+    main(mode=6, out_path='./output/tmp', tune=0, model_num=2, img_num=4)

@@ -1,5 +1,5 @@
 import os
-from model64 import G, D
+from . import model64
 import torch
 import torchvision
 cuda = True
@@ -22,7 +22,7 @@ modelPath = workDir + '/model_normal'
 
 class TestNet(object):
     def __init__(self, out_path, mode, modelNum, img_num, batch_size, tune):
-        self.G = G().to(device)
+        self.G = moedl64.G().to(device)
         self.mode = mode
         self.out_path = out_path
         self.modelNum = modelNum
@@ -60,12 +60,12 @@ class TestNet(object):
 #Dnn = D()
 # Dnn.load_state_dict(torch.load(modelPath))
 
-def main(out_path, mode=0, model_num=0, img_num=4, batch_size=1, tune=False):
-    modelNum = [41, 61, 81, '20_1'] if mode==0 else [31, 71, '_origin']
+def main(out_path, mode, model_num=0, img_num=4, batch_size=1, tune=False):
+    modelNum = [41, 61, 81, '20_1'] if mode==4 else [31, 71, '_origin']
     modelNum = [modelNum[model_num], ]
     testNet = TestNet(out_path, mode, modelNum, img_num, batch_size, tune)
     testNet.init()
     testNet.test()
 
 if __name__ == '__main__':
-    main(out_path='./output', mode=1, model_num=0, img_num=1, batch_size=64, tune=False)
+    main(out_path='./output', mode=4, model_num=0, img_num=1, batch_size=64, tune=False)
