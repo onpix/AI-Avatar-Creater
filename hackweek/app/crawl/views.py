@@ -23,7 +23,7 @@ def data_load():
     global USER_NUM
     out_path=OUT_PATH +'/{}.jpg'.format(USER_NUM)
 
-    print('[test]tune={}\nmodel_num={}\nimg_num={}\nmode={}\nout_path={}'.format(tune, mode
+    print('[test]tune={}\nmodel_num={}\nimg_num={}\nmode={}\nout_path={}'.format(tune, model_num
     , img_num, mode, out_path))
 
 

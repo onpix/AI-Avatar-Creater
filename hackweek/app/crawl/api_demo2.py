@@ -1,5 +1,8 @@
 import os
-from . import model64
+if __package__:
+    from . import model64
+else:
+    import models
 import torch
 import torchvision
 cuda = True
@@ -70,4 +73,4 @@ def main(out_path, mode, model_num=0, img_num=4, batch_size=1, tune=False):
     testNet.test()
 
 if __name__ == '__main__':
-    main(out_path='./output', mode=4, model_num=0, img_num=1, batch_size=64, tune=False)
+    main(out_path='./test.jpg', mode=4, model_num=3, img_num=1, batch_size=16, tune=10)
