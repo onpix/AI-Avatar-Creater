@@ -46,13 +46,14 @@ $(function(){
         form['select-6'] = $('input:radio[name="options-3"]:checked').val();
         form['model'] = $('input:radio[name="options"]:checked').val()
         console.log(form);
+        var img_box = $('#main-img');
         $.ajax({
             url:"/crawl/",
             type:"POST",
             data: form,
             datatype:'json',
             success:function(data){
-                console.log(data);
+                img_box.html('<img src="'+data+'" class="img-responsive">');
             },
             error:function(){
                 $('mainimg').attr('src','/static/pic/comic.jpg');
