@@ -6,7 +6,7 @@ cuda = True
 device = torch.device(
     'cuda') if torch.cuda.is_available() and cuda else torch.device('cpu')
 nz = 100
-'''model=3 for soft , 4for normal'''
+'''model=3 for soft , 4 for normal'''
 #########################    
 # mode = 0   # '0 for normal style, 1 for soft style, -1 to debug')
 # tune = False
@@ -15,7 +15,8 @@ nz = 100
 # modelNum = [x*10+1 for x in range(10)]+[100]
 
 #workDir = os.getcwd()
-modelPath = '/run/media/why/DATA/why的程序测试/AI_Lab/AI-Avatar-Creater/demo_AnimeGAN/model_normal'
+# modelPath = '/run/media/why/DATA/why的程序测试/AI_Lab/AI-Avatar-Creater/demo_AnimeGAN/model_normal'
+modelPath = '/models/demo_AnimeGAN/model_normal'
 # savePath = workDir + '/output'
 # batchSize = opt.batch_size
 #################################################
