@@ -60,7 +60,7 @@ def loadD(num, model_path):
     return netD
 
 
-def set_z(z, tune, img_num):
+def set_z(tune, img_num):
     tmp = torch.randn(100, 1, 1)
     new_z = torch.randn(img_num, 100, 1, 1)
     for i in range(100-tune):
@@ -69,33 +69,45 @@ def set_z(z, tune, img_num):
     return new_z.to(device)
 
 
-def test_tune(mode, tune, img_num, out_path, modelNum, model_path):
+def test_tune(mode, tune, img_num, out_path, modelNum, model_path, batch_size):
     for i in modelNum:
         netG = loadG(i, model_path)
-        noise_batch = torch.FloatTensor(
-            1, 100, 1, 1).normal_(0, 1).to(device)
-        noise_batch = set_z(noise_batch, tune, img_num)
-        fake_batch, _ = netG(noise_batch)
-        for x in fake_batch:
-            im = convert_img(x.data, 8)
+        if not batch_size:
+            noise_batch = set_z(tune, img_num)
+            fake_batch, _ = netG(noise_batch)
+            for x in fake_batch:
+                im = convert_img(x.data, 8)
+                im.save(out_path)
+        else:
+            noise_batch = set_z(tune, batch_size)
+            fake_batch, _ = netG(noise_batch)
+            im = convert_img(fake_batch.data, 8)
             im.save(out_path)
 
 
-def test_new(mode, img_num, out_path, modelNum, model_path, choose):
+def test_new(mode, img_num, out_path, modelNum, model_path, batch_size, choose):
     for i in modelNum:
         netG = loadG(i, model_path)
         netD = loadD(i, model_path)
-        for j in range(img_num):
+        if not batch_size:
+            for j in range(img_num):
+                noise_batch = torch.FloatTensor(
+                    choose, 100, 1, 1).normal_(0, 1).to(device)
+                fake_batch, _ = netG(noise_batch)
+                score = netD(fake_batch)
+                ix = int(torch.argmax(score))
+                im = convert_img(fake_batch[ix].data, 8)
+                im.save(out_path)
+        # 启用batch模式时：
+        else:
             noise_batch = torch.FloatTensor(
-                choose, 100, 1, 1).normal_(0, 1).to(device)
+                    batch_size, 100, 1, 1).normal_(0, 1).to(device)
             fake_batch, _ = netG(noise_batch)
-            score = netD(fake_batch)
-            ix = int(torch.argmax(score))
-            im = convert_img(fake_batch[ix].data, 8)
+            im = convert_img(fake_batch.data, 8)
             im.save(out_path)
 
 
-def main(mode, out_path, tune=0, model_num=0, img_num=1):
+def main(mode, out_path, tune=0, model_num=0, img_num=1, batch_size=0):
     root = '/run/media/why/DATA/why的程序测试/AI_Lab/AI-Avatar-Creater/demo_AnimeGAN'
     if mode == 2:
         model_path = root + '/model_dark/'
@@ -110,9 +122,9 @@ def main(mode, out_path, tune=0, model_num=0, img_num=1):
         modelNum = [20, 40, 60, 80]
     # modelNum = list(range(1, 25))
     if tune:
-        test_tune(mode, tune, img_num, out_path, modelNum, model_path)
+        test_tune(mode, tune, img_num, out_path, modelNum, model_path, batch_size)
     else:
-        test_new(mode, img_num, out_path, modelNum, model_path, choose=64)
+        test_new(mode, img_num, out_path, modelNum, model_path, batch_size, choose=64)
 
 if __name__ =='__main__':
-    main(mode=0, out_path='./output/tmp', tune=0, model_num=2, img_num=4)
+    main(mode=0, out_path='./output/tmp', tune=0, model_num=2, img_num=4, batch_size=64)

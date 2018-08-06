@@ -14,15 +14,15 @@ nz = 100
 # batch_size = 1       #how many figures in a output image.')
 # modelNum = [x*10+1 for x in range(10)]+[100]
 
-workDir = os.getcwd()
-modelPath = workDir + '/model_normal'
+#workDir = os.getcwd()
+modelPath = '/run/media/why/DATA/why的程序测试/AI_Lab/AI-Avatar-Creater/demo_AnimeGAN/model_normal'
 # savePath = workDir + '/output'
 # batchSize = opt.batch_size
 #################################################
 
 class TestNet(object):
     def __init__(self, out_path, mode, modelNum, img_num, batch_size, tune):
-        self.G = moedl64.G().to(device)
+        self.G = model64.G().to(device)
         self.mode = mode
         self.out_path = out_path
         self.modelNum = modelNum
