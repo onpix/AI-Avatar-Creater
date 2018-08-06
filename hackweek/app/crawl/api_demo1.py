@@ -109,7 +109,8 @@ def test_new(mode, img_num, out_path, modelNum, model_path, batch_size, choose):
 
 def main(mode, out_path, tune=0, model_num=0, img_num=1, batch_size=0):
     # root = '/run/media/why/DATA/why的程序测试/AI_Lab/AI-Avatar-Creater/demo_AnimeGAN'
-    root = '/models/demo_AnimeGAN'
+    basedir = os.path.dirname(__file__)
+    root = basedir + '/../models/demo_AnimeGAN'
     if mode == 2:
         model_path = root + '/model_dark/'
         modelNum = ['024_M01', '007_M01']

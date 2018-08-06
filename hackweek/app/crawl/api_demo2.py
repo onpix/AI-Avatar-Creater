@@ -16,7 +16,8 @@ nz = 100
 
 #workDir = os.getcwd()
 # modelPath = '/run/media/why/DATA/why的程序测试/AI_Lab/AI-Avatar-Creater/demo_AnimeGAN/model_normal'
-modelPath = '/models/demo_AnimeGAN/model_normal'
+basedir = os.path.dirname(__file__)
+modelPath = basedir + '/../models/demo_AnimeGAN/model_normal'
 # savePath = workDir + '/output'
 # batchSize = opt.batch_size
 #################################################

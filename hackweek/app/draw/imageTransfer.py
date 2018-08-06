@@ -19,7 +19,8 @@ import torch
 #
 #path options:
 # dir_path = '/run/media/why/DATA/why的程序测试/AI_Lab/AI-Avatar-Creater/hackweek/app/draw/static'
-dir_path = '/draw/static'
+basedir = os.path.dirname(__file__)
+dir_path = basedir + '/static'
 origin_path = dir_path + '/train/'
 style_path = dir_path + '/pic/'
 out_path = dir_path + '/out/'
