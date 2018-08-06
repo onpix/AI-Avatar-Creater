@@ -24,3 +24,6 @@
 .no-padding{
     padding:0;
 }
+body{
+    background-image: url(../pic/back-dark.png);
+}
