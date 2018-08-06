@@ -52,6 +52,11 @@ a:hover{
     #bar1,#bar3{
         height: 50%;
     }
+    #main{
+        background-image: url(../pic/bg-mobile.png);
+        background-repeat: no-repeat;
+        background-size: cover;
+    }
 
 }
 @media (min-width:500px){
