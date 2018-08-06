@@ -12,6 +12,9 @@ def drawl_main():
 def proccess_Data():
     files = request.files
     imgToTrain = files.get('file')
+    # Add to fix None
+    if not imgToTrain:
+        return None
     form = request.form
     print(form)
     path = basedir +"/static/train/"
