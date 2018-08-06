@@ -19,26 +19,26 @@ $(document).ready(function(){
     $('#option-3').attr("checked",'checked');
     $('#btn-label-3').removeClass('btn-default').addClass('on');
     $('#option-1').on('change',function(){
-        $("#styleimg").attr("src","/static/pic/sumiao.jpeg");
+        $("#styleimg").attr("src","/static/pic/style1.png");
         $('#btn-label-1').removeClass('btn-default').addClass('on').siblings()
         .removeClass('on')
         .addClass('btn-default');
     });
     $('#option-2').on('change',function(){
-        $("#styleimg").attr("src","/static/pic/comic.jpg");
+        $("#styleimg").attr("src","/static/pic/style2.png");
         $('#btn-label-2').removeClass('btn-default').addClass('on').siblings()
         .removeClass('on')
         .addClass('btn-default');
 
     }).removeClass('btn-default').addClass('on');
     $('#option-3').on('change',function(){
-        $("#styleimg").attr("src","/static/pic/vango.jpeg");
+        $("#styleimg").attr("src","/static/pic/style3.png");
         $('#btn-label-3').removeClass('btn-default').addClass('on').siblings()
         .removeClass('on')
         .addClass('btn-default');
     }).removeClass('btn-default').addClass('on');
     $('#option-4').on('change',function(){
-        $("#styleimg").attr("src","/static/pic/vango.jpeg");
+        $("#styleimg").attr("src","/static/pic/style4.png");
         $('#btn-label-4').removeClass('btn-default').addClass('on').siblings()
         .removeClass('on')
         .addClass('btn-default');
