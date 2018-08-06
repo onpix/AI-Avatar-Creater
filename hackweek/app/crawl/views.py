@@ -1,10 +1,12 @@
+import os
 from . import api_demo1
 from . import api_demo2
 from . import crawl
 from flask import render_template,request    
 USER_NUM = 0
 # OUT_PATH = '/run/media/why/DATA/why的程序测试/AI_Lab/AI-Avatar-Creater/hackweek/app/crawl/static/out'
-OUT_PATH = '/craw/static/out'
+basedir = os.path.dirname(__file__)
+OUT_PATH = basedir + '/static/out'
 
 @crawl.route('/',methods=['GET'])
 def crawl_main():
