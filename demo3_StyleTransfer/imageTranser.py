@@ -15,7 +15,7 @@ import torch
 parse = argparse.ArgumentParser()
 #user options:
 parse.add_argument('--num_steps', type=int, default=300, help='num of training epoch.')
-parse.add_argument('--style_weight', type=int, default=1e5, help='weight of style compared to contents.')
+parse.add_argument('--style_weight', type=int, default=1e3, help='weight of style compared to contents.')
 #parse.add_argument('--style_num', type=int, default=4, help='number of image style you want to transfer to.')
 
 #path options:
@@ -24,7 +24,7 @@ parse.add_argument('--style_weight', type=int, default=1e5, help='weight of styl
 
 #edfault options:
 parse.add_argument('--cuda', action='store_true', help='use cuda in trainning.')
-parse.add_argument('--max_size', type=int, default=256, help='max size of input image.')
+parse.add_argument('--max_size', type=int, default=200, help='max size of input image.')
 opt = parse.parse_args()
 
 contentLayers = ['conv_4']
@@ -34,7 +34,7 @@ unloader = transforms.ToPILImage()
 device = torch.device('cuda') if opt.cuda else torch.device('cpu')
 cnn = (models.vgg19(pretrained=True).features).eval().to(device)
 rootPath = '/run/media/why/DATA/why的程序测试/AI_Lab/AI-Avatar-Creater/demo3_StyleTransfer'
-TARGET_PATH = rootPath + '/target2.jpg'
+TARGET_PATH = rootPath + '/target6.jpg'
 ORIGIN_PATH = rootPath + '/origin.jpg'
 
 
