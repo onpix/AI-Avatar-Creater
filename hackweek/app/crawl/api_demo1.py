@@ -11,7 +11,10 @@ import random
 import torch
 import torchvision.utils as vutils
 import torchvision.transforms
-from . import models
+if __package__:
+    from . import models
+else:
+    import models
 import re
 CUDA = True
 # mode =1, # '0 for LL style, 1 for dark style, -1 for test.'
@@ -111,6 +114,9 @@ def main(mode, out_path, tune=0, model_num=0, img_num=1, batch_size=0):
     # root = '/run/media/why/DATA/why的程序测试/AI_Lab/AI-Avatar-Creater/demo_AnimeGAN'
     basedir = os.path.dirname(__file__)
     root = basedir + '/../models/demo_AnimeGAN'
+    if __name__ =='__main__':
+        root = '/run/media/why/DATA/why的程序测试/AI_Lab/AI-Avatar-Creater/hackweek/app/models/demo_AnimeGAN'
+
     if mode == 2:
         model_path = root + '/model_dark/'
         modelNum = ['024_M01', '007_M01']
@@ -129,4 +135,4 @@ def main(mode, out_path, tune=0, model_num=0, img_num=1, batch_size=0):
         test_new(mode, img_num, out_path, modelNum, model_path, batch_size, choose=64)
 
 if __name__ =='__main__':
-    main(mode=0, out_path='./output/tmp', tune=0, model_num=2, img_num=4, batch_size=64)
+    main(mode=2, out_path='./test.jpg', tune=30, model_num=3, img_num=4, batch_size=8)
