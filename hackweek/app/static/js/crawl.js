@@ -18,20 +18,20 @@ $(function(){
     $('#option-3').attr("checked",'checked');
     $('#btn-label-3').removeClass('btn-default').addClass('on');
     $('#option-1').on('change',function(){
-        $("#styleimg").attr("src","/static/pic/mode2.jpeg");
+        $("#styleimg").attr("src","/static/pic/mode2.png");
         $('#btn-label-1').removeClass('btn-default').addClass('on').siblings()
         .removeClass('on')
         .addClass('btn-default');
     });
     $('#option-2').on('change',function(){
-        $("#styleimg").attr("src","/static/pic/mode3.jpg");
+        $("#styleimg").attr("src","/static/pic/mode3.png");
         $('#btn-label-2').removeClass('btn-default').addClass('on').siblings()
         .removeClass('on')
         .addClass('btn-default');
 
     }).removeClass('btn-default').addClass('on');
     $('#option-3').on('change',function(){
-        $("#styleimg").attr("src","/static/pic/mode4.jpeg");
+        $("#styleimg").attr("src","/static/pic/mode4.png");
         $('#btn-label-3').removeClass('btn-default').addClass('on').siblings()
         .removeClass('on')
         .addClass('btn-default');
