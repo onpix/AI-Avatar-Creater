@@ -15,6 +15,27 @@ $(function(){
             .addClass('on').siblings().removeClass('on')
             .addClass('btn-default');
     });
+    $('#option-3').attr("checked",'checked');
+    $('#btn-label-3').removeClass('btn-default').addClass('on');
+    $('#option-1').on('change',function(){
+        $("#styleimg").attr("src","/static/pic/sumiao.jpeg");
+        $('#btn-label-1').removeClass('btn-default').addClass('on').siblings()
+        .removeClass('on')
+        .addClass('btn-default');
+    });
+    $('#option-2').on('change',function(){
+        $("#styleimg").attr("src","/static/pic/comic.jpg");
+        $('#btn-label-2').removeClass('btn-default').addClass('on').siblings()
+        .removeClass('on')
+        .addClass('btn-default');
+
+    }).removeClass('btn-default').addClass('on');
+    $('#option-3').on('change',function(){
+        $("#styleimg").attr("src","/static/pic/vango.jpeg");
+        $('#btn-label-3').removeClass('btn-default').addClass('on').siblings()
+        .removeClass('on')
+        .addClass('btn-default');
+    }).removeClass('btn-default').addClass('on');
     $('#sub-Btn').on("click",function (){
         var form={};
         form['select-1'] = $('select[name="select-1"] option:selected').val();
