@@ -16,32 +16,32 @@ $(function(){
     //         .addClass('btn-default');
     // });
     $('#option-3').attr("checked",'checked');
-    $('#btn-label-3').removeClass('btn-default').addClass('on');
+    $('#btn-label-3').removeClass('btn-default').addClass('btn-primary');
     $('#option-1').on('change',function(){
         $("#styleimg").attr("src","/static/pic/mode2.png");
-        $('#btn-label-1').removeClass('btn-default').addClass('on').siblings()
-        .removeClass('on')
+        $('#btn-label-1').removeClass('btn-default').addClass('btn-primary').siblings()
+        .removeClass('btn-primary')
         .addClass('btn-default');
     });
     $('#option-2').on('change',function(){
         $("#styleimg").attr("src","/static/pic/mode3.png");
-        $('#btn-label-2').removeClass('btn-default').addClass('on').siblings()
-        .removeClass('on')
+        $('#btn-label-2').removeClass('btn-default').addClass('btn-primary').siblings()
+        .removeClass('btn-primary')
         .addClass('btn-default');
 
-    }).removeClass('btn-default').addClass('on');
+    }).removeClass('btn-default').addClass('btn-primary');
     $('#option-3').on('change',function(){
         $("#styleimg").attr("src","/static/pic/mode4.png");
-        $('#btn-label-3').removeClass('btn-default').addClass('on').siblings()
-        .removeClass('on')
+        $('#btn-label-3').removeClass('btn-default').addClass('btn-primary').siblings()
+        .removeClass('btn-primary')
         .addClass('btn-default');
-    }).removeClass('btn-default').addClass('on');
+    }).removeClass('btn-default').addClass('btn-primary');
     $('#option-4').on('change',function(){
         $("#styleimg").attr("src","/static/pic/mode6.png");
-        $('#btn-label-4').removeClass('btn-default').addClass('on').siblings()
-        .removeClass('on')
+        $('#btn-label-4').removeClass('btn-default').addClass('btn-primary').siblings()
+        .removeClass('btn-primary')
         .addClass('btn-default');
-    }).removeClass('btn-default').addClass('on');
+    }).removeClass('btn-default').addClass('btn-primary');
     $('input:radio[name="options"]').on('change',function(){
         var i ;
         var models=$('#Models');

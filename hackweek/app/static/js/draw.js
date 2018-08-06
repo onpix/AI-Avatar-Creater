@@ -17,32 +17,32 @@ $(document).ready(function(){
     var draw_main = $('#draw-main');
     draw_download.css('display','none');
     $('#option-3').attr("checked",'checked');
-    $('#btn-label-3').removeClass('btn-default').addClass('on');
+    $('#btn-label-3').removeClass('btn-default').addClass('btn-primary');
     $('#option-1').on('change',function(){
         $("#styleimg").attr("src","/static/pic/style1.png");
-        $('#btn-label-1').removeClass('btn-default').addClass('on').siblings()
-        .removeClass('on')
+        $('#btn-label-1').removeClass('btn-default').addClass('btn-primary').siblings()
+        .removeClass('btn-primary')
         .addClass('btn-default');
     });
     $('#option-2').on('change',function(){
         $("#styleimg").attr("src","/static/pic/style2.png");
-        $('#btn-label-2').removeClass('btn-default').addClass('on').siblings()
-        .removeClass('on')
+        $('#btn-label-2').removeClass('btn-default').addClass('btn-primary').siblings()
+        .removeClass('btn-primary')
         .addClass('btn-default');
 
-    }).removeClass('btn-default').addClass('on');
+    }).removeClass('btn-default').addClass('btn-primary');
     $('#option-3').on('change',function(){
         $("#styleimg").attr("src","/static/pic/style3.png");
-        $('#btn-label-3').removeClass('btn-default').addClass('on').siblings()
-        .removeClass('on')
+        $('#btn-label-3').removeClass('btn-default').addClass('btn-primary').siblings()
+        .removeClass('btn-primary')
         .addClass('btn-default');
-    }).removeClass('btn-default').addClass('on');
+    }).removeClass('btn-default').addClass('btn-primary');
     $('#option-4').on('change',function(){
         $("#styleimg").attr("src","/static/pic/style4.png");
-        $('#btn-label-4').removeClass('btn-default').addClass('on').siblings()
-        .removeClass('on')
+        $('#btn-label-4').removeClass('btn-default').addClass('btn-primary').siblings()
+        .removeClass('btn-primary')
         .addClass('btn-default');
-    }).removeClass('btn-default').addClass('on');
+    }).removeClass('btn-default').addClass('btn-primary');
     $('#sub-Btn').on('click',function(){
         console.log($('input:radio[name="options"]:checked').val());
         var formData = new FormData();

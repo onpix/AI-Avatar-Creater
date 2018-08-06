@@ -18,9 +18,6 @@ margin-bottom: 15px;
     display: flex;
     justify-content: center
 }
-.on{
-    background-color:rgb(46,77, 232)
-}
 .vertical-center{
     align-items: center;
 }
