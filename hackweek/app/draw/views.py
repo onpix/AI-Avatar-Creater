@@ -11,7 +11,8 @@ def drawl_main():
 
 
 def handleFilename(filename):
-    return filename + str(int(time.time()))
+    base, ext = os.path.splitext(filename)
+    return base + str(int(time.time())) + ext
 
 @draw.route('/',methods=["POST"])
 def proccess_Data():
