@@ -1,4 +1,3 @@
-<!DOCTYPE html>
 <html lang="en">
 
 <head>
@@ -19,11 +18,11 @@
                         <img src="" alt="图标">
                     </a>
                 </div>
-                <div class="navbar-header" style="position: relative;" >
-                    <button  class="navbar-brand btn" id="nav-btn" style="border: 0;background-color: #333333">
+                <div class="navbar-header" style="position: relative;">
+                    <button class="navbar-brand btn" id="nav-btn" style="border: 0;background-color: #333333">
                         捐赠
                     </button>
-                    <div id="collect">
+                    <div id="collect" style="display: none;">
                         <img src="/static/pic/collect.jpg" alt="">
                     </div>
                 </div>
@@ -32,7 +31,7 @@
 
         </div>
     </div>
-    <div class="container" id="crawl-download">
+    <div class="container" id="crawl-download" style="display: none;">
         <div class="col-sm-10">
             <div class="center margin-bottom">
                 <div class="col-sm-10 center">
@@ -70,40 +69,33 @@
                             <div class="btn-group flex center-block no-padding" data-toggle="buttons" id="button-group1">
                                 <label class="btn btn-default" id="btn-label-1">
                                     素描
-                                    <input type="radio" name="options" id="option-1" value=2>
+                                    <input type="radio" name="options" id="option-1" value="2">
                                 </label>
                                 <label class="btn btn-default" id="btn-label-2">
                                     动漫
-                                    <input type="radio" name="options" id="option-2" value=3>
+                                    <input type="radio" name="options" id="option-2" value="3" class="btn-primary">
                                 </label>
-                                <label class="btn btn-default" id="btn-label-3">
+                                <label class="btn btn-primary" id="btn-label-3">
                                     梵高
-                                    <input type="radio" name="options" id="option-3" value=4>
+                                    <input type="radio" name="options" id="option-3" value="4" checked="checked" class="btn-primary">
                                 </label>
                                 <label class="btn btn-default" id="btn-label-4">
                                     梵高
-                                    <input type="radio" name="options" id="option-4" value=6>
+                                    <input type="radio" name="options" id="option-4" value="6" class="btn-primary">
                                 </label>
                             </div>
                         </div>
                     </div>
                 </div>
             </div>
-            <div class="row">
-                <div class="col-sm-4 bg-white">
-                    <div class="center vertical-center">
-                        <div class="flex imgbox" id="main-img">
-                            <img src="/static/pic/sky.jpg" alt="如果没有加载好的话，说明我们的服务器真的很烂" class="img-responsive">
-                        </div>
-                    </div>
-                </div>
-                <div class="col-sm-8 bg-light">
+            <div class="row center">
+
+
+                <div class="col-sm-10 bg-light">
                     <div class="row">
-                        <h5 class="text-center">
-                            <em>Options</em>
-                        </h5>
+
                         <div class="center">
-                            <div class="col-sm-12">
+                            <div class="col-sm-8" style="min-width:120px;">
                                 <label for="feature-1 text-center">Models</label>
                                 <select name="select-1" id="Models" class="input-sm form-control">
                                     <option value="1">1</option>
@@ -116,16 +108,6 @@
                         </div>
                     </div>
                     <div class="row">
-                        <!-- <div class="flex" style="position: relative;">
-                                                <button class="btn btn-primary" id="dropdown-btn1" type="button" data-toggle="dropdown" aria-haspopup="true"
-                                                aria-expanded="false">特征1<span class="caret"></span>
-                                                </button>
-                                                <ul class="dropdown-menu" aria-labelledby="dropdown-btn1">
-                                                    <li><a href="#">选项一</a></li>
-                                                    <li><a href="#">选项二</a></li>
-                                                    <li><a href="#">选项三</a></li>
-                                                </ul>
-                                            </div> -->
                         <div class="">
                             <form action="" role="form" class="container-fluid">
                                 <div class="form-group row form-inline row">
@@ -156,45 +138,10 @@
                                             <option value="64">64</option>
                                         </select>
                                     </div>
+
+                                </div>
                             </form>
-                            </div>
                         </div>
-                        <!-- <div class="row">
-                                                    <div class="col-sm-6 no-padding center">
-                                                        <div class="">
-                                                             <h5 class="text-center">feature-1</h5>
-                                                                <div class="col-sm-6 btn-group flex center-block no-padding" data-toggle="buttons" id="button-group1">
-                                                                        <label class="btn btn-default" id="opt2-label1">
-                                                                            特征-1 <input type="radio" name="options-2" id="option2-1" value="1">                               
-                                                                             </label>
-                                                                             <label class="btn btn-default" id="opt2-label2">
-                                                                                特征-2<input type="radio" name="options-2" id="option2-2" value="2">                               
-                                                                            </label>
-                                                                            <label class="btn btn-default" id="opt2-label3">
-                                                                            特征-3<input type="radio" name="options-2" id="option2-3" value="3">                               
-                                                                    </label>  
-                                                                </div>
-                                                        </div>
-                                                    </div>
-                                                        <div class="col-sm-6 no-padding center ">
-                                                            <div>
-                                                                <h5 class="text-center">feature-2</h5>
-                                                                    <div class="col-sm-6 btn-group flex center-block no-padding" data-toggle="buttons" id="button-group1">
-                                                                        <label class="btn btn-default" id="opt3-label1">
-                                                                            特征-1 <input type="radio" name="options-3" id="option3-1" value="1">                               
-                                                                             </label>
-                                                                             <label class="btn btn-default" id="opt3-label2">
-                                                                                特征-2<input type="radio" name="options-3" id="option3-2" value="2">                               
-                                                                            </label>
-                                                                            <label class="btn btn-default" id="opt3-label3">
-                                                                            特征-3<input type="radio" name="options-3" id="option3-3" value="3">                               
-                                                                    </label>  
-                                                                        
-                                                                    </div>
-                                                            </div>
-                                                            
-                                                 </div>
-                                        </div> -->
                         <div class="center row">
                             <div class="btn">
                                 <button class="btn btn-lg btn-primary" id="sub-Btn">生成</button>
@@ -208,6 +155,8 @@
     <script src="/static/js/jquery.js"></script>
     <script src="/static/bootstrap-3.3.7-dist/js/bootstrap.min.js"></script>
     <script src="/static/js/crawl.js"></script>
+
+
 </body>
 
 </html>
