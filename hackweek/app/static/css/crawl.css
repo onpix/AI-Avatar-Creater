@@ -42,4 +42,5 @@ body{
     height: 60px;
     z-index: 3;
     display: none;
+    top: 50px;
 }
