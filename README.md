@@ -71,8 +71,12 @@ $ pip install pytorch
 ```sh
 $ pip install flask
 ```
+* Mataplotlib
 
 ## Run
 1. Go to `hackweek` directory, and then run using `python manage.py`
 2. It will download the PyTorch model automatically, wait patiently.
 3. If successful, it should appear the basic server infomation. Go to http://localhost:5000 to have fun
+
+## Future
+Docker image(Still waited to be optimized)
