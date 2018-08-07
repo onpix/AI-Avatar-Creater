@@ -1,7 +1,0 @@
-model test:
-
-netG_epoch_40.pth   good 
-netG_epoch_60.pth   bad
-netG_epoch_80_3.pth     good
-netG_epoch_80.pth       good
-netG_epoch_160.pth      bad
