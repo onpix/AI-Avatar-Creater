@@ -75,4 +75,4 @@ def main(out_path, mode, model_num=0, img_num=4, batch_size=1, tune=False):
     testNet.test()
 
 if __name__ == '__main__':
-    main(out_path='./test.jpg', mode=4, model_num=3, img_num=1, batch_size=8, tune=30)
+    main(out_path='./test.jpg', mode=4, model_num=3, img_num=1, batch_size=8, tune=0)
