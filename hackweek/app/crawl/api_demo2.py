@@ -9,6 +9,7 @@ cuda = True
 device = torch.device(
     'cuda') if torch.cuda.is_available() and cuda else torch.device('cpu')
 nz = 100
+choose = 8
 '''model=3 for soft , 4 for normal'''
 #########################    
 # mode = 0   # '0 for normal style, 1 for soft style, -1 to debug')
@@ -63,6 +64,27 @@ class TestNet(object):
                 ), self.out_path, normalize=True)
         print('\033[1;36;40m  generate over! \033[0m')
 
+    # 忘记保存辨别器的模型了QAQ...结果新功能用不了...太惨了
+    # def test_choose(self):
+    #     self.D = model64.D().to(device)
+    #     self.tune = False
+    #     for n in self.modelNum:
+    #         GmodelPath = modelPath + '/Gnn-epoch{}.pkl'.format(n)
+    #         DmodelPath = modelPath + '/Dnn-epoch{}.pkl'.format(n)
+    #         self.G.load_state_dict(torch.load(GmodelPath))
+    #         self.D.load_state_dict(torch.load(DmodelPath))
+    #         for i in range(self.img_num):
+    #             tmp = z = torch.randn(self.batch_size, nz, 1, 1).to(device)
+    #             for j in range(self.batch_size):
+    #                 z = torch.randn(self.choose, nz, 1, 1).to(device)
+    #                 out = self.G(z).detach()
+    #                 score = self.D(out)
+    #                 ix = int(torch.argmax(score))
+    #                 tmp[j] = out[ix]
+    #             
+    #             torchvision.utils.save_image(tmp, self.out_path, normalize=True)
+    #     print('\033[1;36;40m  generate over! \033[0m')
+
 ############## load model: ###############
 #Dnn = D()
 # Dnn.load_state_dict(torch.load(modelPath))
@@ -73,6 +95,7 @@ def main(out_path, mode, model_num=0, img_num=4, batch_size=1, tune=False):
     testNet = TestNet(out_path, mode, modelNum, img_num, batch_size, tune)
     testNet.init()
     testNet.test()
+    #testNet.test_choose()
 
 if __name__ == '__main__':
     main(out_path='./test.jpg', mode=4, model_num=3, img_num=1, batch_size=8, tune=0)
