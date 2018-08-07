@@ -28,6 +28,9 @@ def data_load():
     request.form
     # args:
     tune = 100-10*int(data.get('level'))
+    if tune == 90:
+        tune = False
+
     model_num = int(data.get('models'))-1
     img_num = int(data.get('number'))
     mode = int(data.get('situation'))
