@@ -17,12 +17,6 @@ web开发：@Benjaminyuan
 
 你可以使用`AI-Avatar-Creater`来：
 
-### 使用`GAN`生成动漫风格头像
-
-* `LoveLive`风格头像的训练数据来自`LoveLive!`的人物立绘。
-* 其他训练数据均来自各动漫图库。
-
-
 ### 使用实时风格迁移
 
 （论文见[这里](https://www.cv-foundation.org/openaccess/content_cvpr_2016/papers/Gatys_Image_Style_Transfer_CVPR_2016_paper.pdf?spm=5176.100239.blogcont62518.12.e6rUdh&file=Gatys_Image_Style_Transfer_CVPR_2016_paper.pdf)）可以将用户上传的图片转换特定风格：
@@ -33,12 +27,41 @@ web开发：@Benjaminyuan
 
 ***
 
+### 使用`GAN`生成动漫风格头像
+
+* `LoveLive`风格头像的训练数据来自`LoveLive!`的人物立绘。
+* 其他训练数据均来自各动漫图库。
+
+### 生成效果
+
+* 使用动漫图库训练的结果：
+    ![](https://raw.githubusercontent.com/creeper121386/AI-Avatar-Creater/master/debug_demo3_StyleTransfer/background/sample-epoch41-test0.jpg)
+
+* 使用网上下载的（别人爬的）数据集训练的结果，使用的模型结构来自`anime-GAN`：
+    ![](https://raw.githubusercontent.com/creeper121386/AI-Avatar-Creater/master/debug_demo3_StyleTransfer/background/test_2.jpg)
+
+* 使用lovelive立绘训练的结果：
+    ![](https://raw.githubusercontent.com/creeper121386/AI-Avatar-Creater/master/debug_demo3_StyleTransfer/background/test.jpg)
+    （忽略部分扭曲的五官...训练数据太少了没办法...毕竟还是有很多高质量头像的！可怜的why爬了整整两天的数据...
+
+***
+
+## To AI Developer
+
+本产品是`UniqueHackweek`的参赛作品，不用做商业用途。如果你想要直接运行`PyTorch`神经网络或查看AI源码：
+* 可以直接查看`AI-Avatar-Creater/hackweek/app/crawl/`和`AI-Avatar-Creater/hackweek/app/draw/`中的`pytorch`接口。
+* 可以载入`AI-Avatar-Creater/hackweek/app/models`中的模型参数文件进行后续的训练或实验，训练数据可以使用爬虫自行爬取。
+
+***
+
+**Added by @ThinCats:**
+
 ## Built
 To built, you need:
 * PyTorch
-    ```sh
-    $ pip install pytorch
-    ```
+```sh
+$ pip install pytorch
+```
 * NVIDIA with cuda-toolkit
 * Flask (for web view)
 ```sh
