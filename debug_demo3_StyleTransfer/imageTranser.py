@@ -33,7 +33,7 @@ contentWeight = 1
 unloader = transforms.ToPILImage()
 device = torch.device('cuda') if opt.cuda else torch.device('cpu')
 cnn = (models.vgg19(pretrained=True).features).eval().to(device)
-rootPath = '/run/media/why/DATA/why的程序测试/AI_Lab/AI-Avatar-Creater/demo3_StyleTransfer'
+rootPath = '/run/media/why/DATA/why的程序测试/AI_Lab/AI-Avatar-Creater/debug_demo3_StyleTransfer'
 TARGET_PATH = rootPath + '/target6.jpg'
 ORIGIN_PATH = rootPath + '/origin111.jpg'
 
@@ -169,5 +169,5 @@ def main():
     plt.savefig(str(np.random.randint(1e5))+'.jpg')
     #plt.ioff()
     #plt.show()
-
-main()
+if __name__ == "__main_-":
+    main()

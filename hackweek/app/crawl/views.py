@@ -16,7 +16,7 @@ def data_load():
     print(request.form)
     request.form
     # args:
-    tune  =10*int(data.get('level'))
+    tune = 100-10*int(data.get('level'))
     model_num = int(data.get('models'))-1
     img_num = int(data.get('number'))
     mode = int(data.get('situation'))
