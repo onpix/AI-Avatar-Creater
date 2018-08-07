@@ -1,20 +1,4 @@
 $(function(){
-    // $('#option2-1').attr('checked','checked');
-    // $('#opt2-label1').removeClass('btn-default')
-    // .addClass('on');
-    // $('input:radio[name="options-2"]').on('change',function(){
-    //     $(this).parent().removeClass('btn-default')
-    //         .addClass('on').siblings().removeClass('on')
-    //         .addClass('btn-default');
-    // })
-    // $('#option3-1').attr('checked','checked');
-    // $('#opt3-label1').removeClass('btn-default')
-    // .addClass('on');
-    // $('input:radio[name="options-3"]').on('change',function(){
-    //     $(this).parent().removeClass('btn-default')
-    //         .addClass('on').siblings().removeClass('on')
-    //         .addClass('btn-default');
-    // });
     $('#option-3').attr("checked",'checked');
     $('#btn-label-3').removeClass('btn-default').addClass('btn-primary');
     $('#option-1').on('change',function(){
