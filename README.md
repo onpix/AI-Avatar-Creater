@@ -42,11 +42,7 @@
   
     ![](https://raw.githubusercontent.com/creeper121386/AI-Avatar-Creater/master/debug_demo3_StyleTransfer/background/test_2.jpg)
 
-* 使用lovelive立绘训练的结果：
-
-    ![](https://raw.githubusercontent.com/creeper121386/AI-Avatar-Creater/master/debug_demo3_StyleTransfer/background/test.jpg)
-
-    （忽略部分扭曲的五官...训练数据太少了没办法...毕竟还是有很多高质量头像的！可怜的why爬了整整两天的数据...
+（忽略部分扭曲的五官...训练数据太少了没办法...毕竟还是有很多高质量头像的！可怜的why爬了整整两天的数据...
 
 ***
 
